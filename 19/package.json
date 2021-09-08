@@ -4,6 +4,7 @@
   "description": "- push/pull - request/response - postman - expressjs",
   "main": "server.js",
   "scripts": {
+    "install": "cd client && npm i",
     "develop": "concurrently \"nodemon server.js\" \"cd client && npm start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
