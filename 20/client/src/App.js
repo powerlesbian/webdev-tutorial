@@ -6,6 +6,8 @@ import {
 
 import { BankProvider } from './utils/BankContext';
 
+import Hello from './components/Hello';
+
 import Home from './pages/Home';
 import MyNavbar from './components/MyNavbar';
 import NotFound from './pages/NotFound';
@@ -18,6 +20,7 @@ function App() {
   return (
     <BankProvider>
       <Router>
+        <Hello />
         <div className="container">
           <MyNavbar />
           <Switch>

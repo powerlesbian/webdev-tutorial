@@ -5,8 +5,6 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  useQuery,
-  gql
 } from "@apollo/client";
 
 import App from './App';
@@ -18,19 +16,11 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-client
-  .query({
-    query: gql`
-      query q {
-        hello
-      }
-    `
-  })
-  .then(result => console.log(result));
-
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>,
   </React.StrictMode>,
   document.getElementById('root')
 );
