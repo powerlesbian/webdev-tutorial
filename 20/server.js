@@ -4,14 +4,20 @@ const users = require('./data/users');
 const { ApolloServer, gql } = require('apollo-server-express');
 
 const typeDefs = gql`
+  type User {
+    username: String
+    password: String
+  }
   type Query {
     hello: String
+    getUsers: [User]
   }
 `;
 
 const resolvers = {
   Query: {
     hello: () => 'Hello world from graphql!',
+    getUsers: () => users,
   },
 };
 
