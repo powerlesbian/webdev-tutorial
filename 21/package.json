@@ -1,0 +1,22 @@
+{
+  "name": "21",
+  "version": "1.0.0",
+  "description": "- expressjs - lowdb - routing - http methods - get, post, put, delete - integrate frontend",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --ignore 'db.json' server.js",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "lowdb": "^3.0.0"
+  }
+}
