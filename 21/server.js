@@ -18,6 +18,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
+app.get('/api/characters', (req, res) => res.json(db.data));
+
+app.post('/api/characters', async (req, res) => {
+  console.log(req.body);
+  db.data.characters.push(req.body);
+  await db.write();
+  res.json(db.data);
+});
+
 app.listen(3000, () => {
   console.log("Server running on port 3000");
   console.log(db.data);
