@@ -2,6 +2,7 @@ import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 import express from "express";
+import morgan from 'morgan';
 import { Low, JSONFile } from 'lowdb';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -13,6 +14,8 @@ const db = new Low(adapter);
 await db.read();
 
 const app = express();
+
+app.use(morgan('tiny'));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
