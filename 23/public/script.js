@@ -25,5 +25,5 @@ addCharacterButton.addEventListener('click', () => {
       body: JSON.stringify({ name, game })
     }
   )
-    .then(res => console.log(res));
+    .then(res => location.reload());
 });

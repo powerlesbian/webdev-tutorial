@@ -35,6 +35,14 @@ app.post('/api/characters', async (req, res) => {
   res.json(db.data);
 });
 
+app.delete('/api/characters', async (req, res) => {
+  console.log(req.body);
+  const filteredCharacters = db.data.characters.filter(({ name }) => name !== req.body.name);
+  db.data.characters = filteredCharacters;
+  await db.write();
+  res.json(db.data);
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
