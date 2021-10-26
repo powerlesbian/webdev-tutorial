@@ -1,0 +1,16 @@
+version: "3"
+services:
+  mern-demo:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    volumes:
+      - data-volume:/data/db
+    ports:
+      - "27017:27017"
+volumes:
+    data-volume:
