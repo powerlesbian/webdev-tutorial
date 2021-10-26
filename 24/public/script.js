@@ -1,13 +1,24 @@
 const addCharacterButton = document.querySelector('#addCharacter');
 const characterContainer = document.querySelector('#characters');
 
+function deleteChar() {
+  console.log(this);
+}
+
 fetch('/api/characters')
   .then(response => response.json())
   .then(characters => {
     characters.forEach(character => {
+      const divEl = document.createElement('div');
       const pEl = document.createElement('p');
       pEl.textContent = `${character.name} is from the game ${character.game}`;
-      characterContainer.appendChild(pEl);
+      const buttonEl = document.createElement('button');
+      buttonEl.value = character.name;
+      buttonEl.textContent = `Delete ${character.name}`;
+      buttonEl.onclick = deleteChar;
+      divEl.appendChild(pEl);
+      divEl.appendChild(buttonEl);
+      characterContainer.appendChild(divEl);
     });
   });
 

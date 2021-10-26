@@ -17,10 +17,8 @@ router.post('/api/characters', async (req, res) => {
 
 router.delete('/api/characters', async (req, res) => {
   console.log(req.body);
-  const filteredCharacters = db.data.characters.filter(({ name }) => name !== req.body.name);
-  db.data.characters = filteredCharacters;
-  await db.write();
-  res.json(db.data);
+  const deletedChar = Character.deleteOne({ name: req.body.name });
+  res.json(deletedChar);
 });
 
 export default router;
