@@ -1,5 +1,5 @@
 import passport from "passport";
-
+import passportLocal from '../passport/passport-local.js';
 
 const createCookieFromToken = (user, statusCode, req, res) => {
   const token = user.generateVerificationToken();

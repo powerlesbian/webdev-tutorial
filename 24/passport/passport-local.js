@@ -56,3 +56,5 @@ passport.use(
     }
   }),
 );
+
+export default undefined;

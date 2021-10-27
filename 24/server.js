@@ -6,6 +6,7 @@ import morgan from 'morgan';
 import mongoose from 'mongoose';
 import cookieParser from "cookie-parser";
 import passport from "passport";
+passport.initialize();
 
 import characterRoutes from './routes/characters.js';
 import authRoutes from './routes/auth.js';
@@ -23,8 +24,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 app.use(cookieParser());
-
-passport.initialize();
 
 app.use((req, res, next) => {
   console.log('Hello from middleware!');
