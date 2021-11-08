@@ -1,12 +1,14 @@
 import { gql } from "apollo-server-core";
 
 export default gql`
-  type User {
-    username: String
-    password: String
+  type Character {
+    name: String
+    game: String
   }
   type Query {
-    hello: String
-    getUsers: [User]
+    getCharacters: [Character]
+  }
+  type Mutation {
+    addCharacter(name: String!, game: String!): Character
   }
 `;

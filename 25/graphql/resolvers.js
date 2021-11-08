@@ -1,6 +1,10 @@
+import Character from "../models/Character.js";
+
 export default {
   Query: {
-    hello: () => 'Hello world from graphql!',
-    getUsers: () => ([{ username: 1 }]),
+    getCharacters: async () => await Character.find(),
   },
+  Mutation: {
+    addCharacter: async (parent, args) => await Character.create(args),
+  }
 };
