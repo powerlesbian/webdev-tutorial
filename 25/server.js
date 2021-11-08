@@ -3,7 +3,7 @@ import express from "express";
 import morgan from 'morgan';
 import mongoose from 'mongoose';
 import swaggerUi from 'swagger-ui-express';
-import { ApolloServer, gql } from 'apollo-server-express';
+import { ApolloServer } from 'apollo-server-express';
 
 const swaggerDocument = JSON.parse(fs.readFileSync('./swagger.json'));
 
