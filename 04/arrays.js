@@ -1,7 +1,14 @@
 const words = ['I', 'love', 'pizza'];
 
+console.log(words);
 console.log(words[0]);
 console.log(words.length);
+
+console.log('------for------');
+for (let i = 0; i < words.length; i++) {
+  const word = words[i];
+  console.log(word);
+}
 
 words.push('!');
 
@@ -21,11 +28,9 @@ console.log(words);
 const str = words.join(' ');
 console.log(str);
 
-console.log('for');
-for (let i = 0; i < words.length; i++) {
-  const word = words[i];
-  console.log(word);
-}
+const sentence = 'this is a short sentence';
+const arrSentence = sentence.split(' ');
+console.log(arrSentence);
 
 console.log('foreach');
 words.forEach((word) => console.log(word));

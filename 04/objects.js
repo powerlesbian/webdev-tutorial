@@ -16,6 +16,7 @@ const person = {
   }
 }
 
+console.log(person);
 console.log(person.name);
 console.log(person['name']);
 console.log(person.hobbies[1]);
