@@ -17,7 +17,7 @@ router.post('/api/characters', async (req, res) => {
 
 router.delete('/api/characters', async (req, res) => {
   console.log(req.body);
-  const deletedChar = Character.deleteOne({ name: req.body.name });
+  const deletedChar = await Character.deleteOne({ name: req.body.name });
   res.json(deletedChar);
 });
 

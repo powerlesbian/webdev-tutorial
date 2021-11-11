@@ -5,8 +5,6 @@ import mongoose from 'mongoose';
 import swaggerUi from 'swagger-ui-express';
 import { ApolloServer } from 'apollo-server-express';
 
-const swaggerDocument = JSON.parse(fs.readFileSync('./swagger.json'));
-
 mongoose.connect("mongodb://localhost/nintendo-characters", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -22,6 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
+const swaggerDocument = JSON.parse(fs.readFileSync('./swagger.json'));
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 import typeDefs from './graphql/typedefs.js';
