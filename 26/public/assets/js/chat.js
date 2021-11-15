@@ -53,7 +53,6 @@
     handleRead();
   });
 
-  // TODO: use this provided messagesRef to listen for updates and update the chat div on any update, not just when the 'Update Chat' button is clicked
   const messagesRef = db.ref('messages');
   messagesRef.on('value', (snapshot) => {
     handleRead();
