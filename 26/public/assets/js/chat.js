@@ -1,8 +1,4 @@
 (function () {
-  // TODO: replace this with your own firebase config object after creating app in your firebase console
-  // Your web app's Firebase configuration
-
-  // note: this config will not work indefinitely, will need to replace with your own config to run solution file
   const firebaseConfig = {
     apiKey: "AIzaSyDXfCOHp-MQ3Q3loOF1WWlxK1RwaJ8UUBU",
     authDomain: "eagles-5fc88.firebaseapp.com",
