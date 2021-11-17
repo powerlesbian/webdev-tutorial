@@ -3,3 +3,4 @@
 - firebase
 - chat app
 - implement graphql frontend
+- add react
