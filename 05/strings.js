@@ -1,7 +1,7 @@
 const myName = 'Anthony';
 
 console.log(myName.length);
-console.log(myName[0]);
+console.log(myName[1]);
 
 for (let i = 0; i < myName.length; i++) {
   const char = myName[i];

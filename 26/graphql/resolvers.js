@@ -6,5 +6,6 @@ export default {
   },
   Mutation: {
     addCharacter: async (parent, args) => await Character.create(args),
+    deleteCharacter: async (parent, args) => await Character.deleteOne({ name: args.name }),
   }
 };

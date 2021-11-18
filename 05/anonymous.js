@@ -1,13 +1,19 @@
-setTimeout(function () {
-  console.log('hi!')
-}, 1000);
+// setTimeout(function () {
+//   console.log('hi!')
+// }, 5000);
 
-const helloWorld = () => console.log('hello world!');
-setTimeout(helloWorld, 2000);
+// function hello() {
+//   console.log('hi!');
+// }
 
-(function () {
-  console.log('i have no name');
-})();
+// setTimeout(hello, 5000);
+
+// const helloWorld = () => console.log('hello world!');
+// setTimeout(helloWorld, 2000);
+
+// (function () {
+//   console.log('i have no name');
+// })();
 
 const dog = {
   name: 'grace',

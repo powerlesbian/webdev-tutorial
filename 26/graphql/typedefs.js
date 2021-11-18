@@ -11,5 +11,6 @@ export default gql`
   }
   type Mutation {
     addCharacter(name: String!, game: String!): Character
+    deleteCharacter(name: String!): Character
   }
 `;
