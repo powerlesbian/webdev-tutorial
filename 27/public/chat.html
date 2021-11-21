@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+
+<body>
+  <a href="/">Home</a>
+  <div id="name-display"></div>
+  <br />
+  <input id="email" type="email" placeholder="Email" /><br />
+  <input id="password" type="password" placeholder="Password" /><br /><br />
+  <button id="login">Login</button>
+  <button id="signup">SignUp</button>
+  <button id="logout" style="display: none">Logout</button>
+
+  <br />
+  <br />
+  <br />
+
+  <button id="read">Update Chat</button><br />
+  <div id="status"></div>
+  <div id="chat-box" class="chat chat-viewer"></div>
+  <input id="message" type="text" class="chat chat-sender" placeholder="Type a message here..." /><br />
+  <button id="write" style="display: none">Write</button>
+  <script src="./assets/js/chat.js"></script>
+</body>
+
+</html>
